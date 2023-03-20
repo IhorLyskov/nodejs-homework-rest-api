@@ -56,9 +56,17 @@ const loginSchema = Joi.object({
     .messages({ "any.required": "missing field email" }),
 });
 
+const usersSchema = Joi.object({
+  subscription: Joi.string()
+    .valid(...subscriptionList)
+    .required()
+    .messages({ "any.required": "missing field subscription" }),
+});
+
 const schemas = {
   registerSchema,
   loginSchema,
+  usersSchema,
 };
 
 const User = model("user", userSchema);
