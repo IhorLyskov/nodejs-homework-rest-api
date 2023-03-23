@@ -3,6 +3,7 @@ const isDummyBody = require("./isDummyBody");
 const isDummyBodyFavorite = require("./isDummyBodyFavorite");
 const isValidId = require("./isValidId");
 const authenticate = require("./authenticate");
+const upload = require("./upload");
 
 module.exports = {
   validateBody,
@@ -10,4 +11,5 @@ module.exports = {
   isDummyBodyFavorite,
   isValidId,
   authenticate,
+  upload,
 };
